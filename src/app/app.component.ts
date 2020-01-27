@@ -1,6 +1,6 @@
 import { Component, Pipe, PipeTransform } from '@angular/core';
 import  *  as  data  from  './json/user.json';
-import { FilterDatePipe } from './shared/filterDate.pipe';
+//import { FilterDatePipe } from './shared/filterDate.pipe';
 
 @Component({
   selector: 'my-app',
