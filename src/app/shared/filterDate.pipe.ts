@@ -23,12 +23,15 @@ export class FilterDatePipe implements PipeTransform {
                         let date2 = 0;  
                         if (val1) {
                             let obj = new Date(this.converDateToJson(val1));
+                            
                             date1= obj && obj.getFullYear() ? Number(obj.getFullYear()) : 0;
                         }
                         if (val2) {
                             let obj = new Date(this.converDateToJson(val2));
                             date2=  obj && obj.getFullYear() ? Number(obj.getFullYear()) : 0;
                         }
+                        console.log("Date1"+date1);
+                        console.log("Date2"+date2);
                         if (date1!= 0 && date2 != 0 && date1 >= fromDate && date2 <= toDate) {
                             
                                 return true;
