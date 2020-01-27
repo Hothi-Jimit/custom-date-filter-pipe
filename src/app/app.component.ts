@@ -12,9 +12,9 @@ export class AppComponent  {
 
     ngOnInit(){
     console.log("Data::"+JSON.stringify(data));
-    let dataJson:any;
+   /* let dataJson:any;
     dataJson=data;
-   /* let filterPipe = new FilterDatePipe();
+    let filterPipe = new FilterDatePipe();
      let selectFromDate = Number('1-1-2020');
         let selectToDate = Number('2-1-2020');
 

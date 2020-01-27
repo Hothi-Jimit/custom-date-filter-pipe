@@ -2,7 +2,8 @@
  * This  component is used main screen.
  */
 
-import {  Pipe, PipeTransform  } from '@angular/core';
+import {Component,  Pipe, PipeTransform  } from '@angular/core';
+import 'rxjs/add/operator/filter';
 
 @Pipe({
     name: 'filterDatePipe',
@@ -15,9 +16,9 @@ export class FilterDatePipe implements PipeTransform {
         if (items) {          
             if (fromDate != 0 && toDate != 0) {
                 return items.filter(item => {
-                    if (item["from_to_date"]) {
-                        let val1 = item["from_to_date"].split(' - ')[0];
-                        let val2 = item["from_to_date"].split(' - ')[1];
+                    if (item["created_date"]) {
+                        let val1 = item["created_date"];
+                        let val2 = item["created_date"];
                         let date1 = 0;  
                         let date2 = 0;  
                         if (val1) {
