@@ -5,12 +5,12 @@
 import { Component, Pipe, PipeTransform  } from '@angular/core';
 
 @Pipe({
-    name: 'filterPipe',
+    name: 'filterDatePipe',
     pure: false
 })
 
 
-export class FilterPipe implements PipeTransform {
+export class FilterDatePipe implements PipeTransform {
     transform(items: any[], fromDate: number, toDate: number,field:string):  any {
         if (items) {          
             if (fromDate != 0 && toDate != 0) {
