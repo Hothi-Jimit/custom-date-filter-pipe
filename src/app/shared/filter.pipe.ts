@@ -12,8 +12,7 @@ import { Component, Pipe, PipeTransform  } from '@angular/core';
 
 export class FilterPipe implements PipeTransform {
     transform(items: any[], fromDate: number, toDate: number,field:string):  any {
-        if (items) {
-            //console.log(fromDate+" "+toDate)
+        if (items) {          
             if (fromDate != 0 && toDate != 0) {
                 return items.filter(item => {
                     if (item["from_to_date"]) {
